@@ -89,7 +89,7 @@ if ! [ -z "$INPUT_DOCKER_PRUNE" ] && [ $INPUT_DOCKER_PRUNE = 'true' ] ; then
 fi
 
 if ! [ -z "$INPUT_PRE_DEPLOYMENT_STEP_COMMAND" ] ; then
-  execute_ssh ${INPUT_PRE_DEPLOYMENT_STEP_COMMAND}
+  ${INPUT_PRE_DEPLOYMENT_STEP_COMMAND}
 fi
 
 if ! [ -z "$INPUT_COPY_STACK_FILE" ] && [ $INPUT_COPY_STACK_FILE = 'true' ] ; then
